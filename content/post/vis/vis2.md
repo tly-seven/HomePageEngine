@@ -1,0 +1,251 @@
+---
+title: "常见可视化分析图表"
+date: 2018-05-30T19:30:57+08:00
+---
+
+# 一、概述
+- 本文通过例子简要展示了一些关于可视化和交互的技术，用于处理一些数据集。
+- 很多情况下，简单的数据图表是不够的，我们将关注一些更为复杂的、用于处理复杂数据集的技术。
+- “去动物园是去看北极熊、斑马、老虎，而不是为了看猫和狗”。
+
+# 二、Time-Series Data
+- Time-Series Data：随着时间变化的数据集。
+- example：
+	- 金融业：股票、债券价格
+	- 科学：温度、污染等级
+	- 公共政策：犯罪率
+
+## 2.1 Index Charts
+- 定义：对于时间序列的数据集，基于选择的索引点，展示其百分比变化的线形图表。
+- 需求：数据值没有相对变化趋势重要。
+- Example：
+	- 一个更关注股票增长速率、而不是股票价格的投资者。
+	- 下图为股票相对于 Jan 2005 时间，股价的变化速率。
+
+![](/images/blogs/vis/a1.png)
+
+## 2.2 Stacked Graphs
+- 定义：Stacked Graphs（or Stream Graphs），描绘了聚合、叠加形态的图，且支持进入子集
+- 需求：对于时间序列的数据集，展示数据聚合、叠加的图。
+- 局限性：
+	- 不支持负数。
+	- 对于不需要求和的数据集没有意义，比如温度。
+	- 难以准确的描述趋势，由于它叠加的性质。
+- Example：2000——2010，美国失业者的数量，按照行业来区分。
+
+![](/images/blogs/vis/a2.png)
+
+## 2.3 Small Multiples
+- 定义：将每个 Time-Series Data 安置在一个图表上。
+- 需求：
+	- 需要有一种图表代替 Stacked Graphs，Stacked Graphs 将多个 Time-Series Data 放置在同一个坐标轴。
+	- 可能产生部分重叠的曲线、不清晰、且信息量过少。
+- 构造形式：any，条形图、饼图、地图...
+- Example：类似上一节，2000——2010，美国失业者的数量，按照行业来区分。
+
+![](/images/blogs/vis/a3.png)
+
+## 2.4 Horizon Graphs
+- 需求：想要同时比较更多的 Time-Series Data，更大的数据密度同时保持分辨率。
+- Example：假设正值为蓝负值为红，2000——2010 美国失业率变化。
+	- 图一：标准区域图，正负一上一下。
+	- 图二：镜像（Mirrors）区域图，正负同区，double 数据密度。
+	- 图三：Horizon Graph，类似 Mirrors，但进行分级和分层，再次 double 数据密度。
+	- 图四：再次 double。
+	- 图五：再次 double。
+
+![](/images/blogs/vis/a4.png)
+
+# 三、Statistical Distributions
+- 需求：
+	- 离散数据集建模，进行假设检验或未来值预测。
+	- 试探性的数据分析，离散数据特征化、分布化。
+- 常见的技术：
+	- Histogram：直方图、柱状图。展示了数据值的普遍程度，表现了数据的统计特征（eg：意义、中位数、分界、极端异常值）。
+	- others
+
+## 3.1 Stem-and-Leaf Plots
+- 定义：
+	- Histogram 的一种，数字直方图，茎叶图。
+	- 通过第一关键位（主干、茎）来将数据分类。在每类中，通过第二关键位（分枝、叶）将数据值一一展现。
+- 作用：既能获得频率分布，也能获得每一个数据。
+- Example：在亚马逊土耳其机器人（一种众包网络集市）上，众包完成率分布情况。
+
+![](/images/blogs/vis/b1.png)
+
+## 3.2 Q-Q Plots
+- 定义：
+	- Quantile-Quantile Plots，Q 代表分位数，用图形的方式比较两个概率分布，比较二者的分位数。图上的点（x,y）反映出第二个分布（y坐标）的分位数和与之对应的第一分布（x坐标）的相同分位数。因此，这条线是一条以分位数间隔为参数的曲线。
+	- 分位数，即分位点。例如中位数、四分位数、百分位数。
+	- 如果两分布相似，绘制的图将粗略沿着中心对角（y=x曲线）；如果两分布线性相关，绘制的图将呈一条直线。
+- 作用：统计分布相比较。
+- Example：亚马逊土耳其机器人上相同的一组参与度数据，与均匀分布、正态分布以及一个混合模型分布做比较。
+
+![](/images/blogs/vis/b2.png)
+
+## 3.3 SPLOM（Scatter Plot Matrix）
+- 散点图：
+	- 定义：数据点在直角坐标系平面上的分布图。反映因变量随自变量变化的大致趋势，据此可以选择适当函数进行拟合。
+- 散点图矩阵：
+	- 定义：Small Multiples of Scatter Plots
+	- 需求：我们分析的对象常常包含多个属性，即多个变量。当欲同时考察多个变量间的相关关系时，若一一绘制它们间的简单散点图，十分麻烦。
+	- 作用：利用散点图矩阵来同时绘制各自变量间的散点图，这样可以快速发现多个变量间的主要相关性，这一点在进行多元线性回归时显得尤为重要。
+- Examples：
+	1. 散点图：人属性数据：身高、体重、性别。
+	2. 散点图矩阵：汽车属性数据：马力、重量、速度（加速）、排水量。
+
+![](/images/blogs/vis/b5.png)
+---
+![](/images/blogs/vis/b3.png)
+
+## 3.4 Parallel Coordinates
+- 定义：平行坐标。为了表示在高维空间的一个点集，在N条平行的线的背景下，（一般这N条线都竖直且等距），一个在高维空间的点被表示为一条拐点在N条平行坐标轴的折线，在第K个坐标轴上的位置就表示这个点在第K个维的值。
+- 需求：传统的笛卡尔直角坐标系容易耗尽空间，难以表达三维以上数据。需要一种用于对高维几何和多元数据的可视化方式。
+- Example：
+
+![](/images/blogs/vis/b4.png)
+
+# 四、Maps
+## 4.1 Flow Maps
+- 定义：流程图、流图
+- 优点：可以通过许多元素进行编码，比如路径点、方向、线宽、颜色...
+- Example：拿破仑远征莫斯科
+
+![](/images/blogs/vis/c1.png)
+
+## 4.2 Choropleth Maps
+- 定义：地区分布图。数据常常根据地理区域来收集，并通常通过颜色编码在 Choropleth Maps 上呈现。
+- 注意事项：
+	- 应该使用规范化的数据值而不是原生数据来得出地区密度。
+	- 阴影数值的感知会被影响。
+- Example：美国各州肥胖比率。
+
+![](/images/blogs/vis/c2.png)
+
+## 4.3 Graduated Symbol Maps
+- 定义：符号图，属于 Choropleth Maps 的一种。将符号放置在地图上。
+- 优点：
+	- 使图更容易理解。
+	- 允许更多元的数据（符号有多重可编码方式：尺寸、形状、颜色...）
+- Example：美国各州 BMI 比率，即肥胖比率升级版。
+
+![](/images/blogs/vis/c3.png)
+
+## 4.4 Cartograms
+- 定义：扭曲了地理区域的形状，因此地理区域可以直接对数据进行编码。
+- Example：美国各州肥肠人口数量和比率。
+
+![](/images/blogs/vis/c4.png)
+
+# 五、Hierarchies
+- 一些数据集仅仅是数据的水平向收集，但更多的数据集是有纵向层次结构的。甚至有的数据集，即便没有明显的层次结构，通过统计学方法也可以转为有层次结构的数据集。
+- 本章节所用 example， 全部都是“软件中，类的包层次结构”。
+
+## 5.1 Node-link Diagrams
+- 背景：树的分支可以反映数据的嵌套。
+- 定义：树的二维形式 -> node-link diagram
+- 树形布局算法：
+	- Reingold Tilford algorithm
+		- 特点：
+			- 整齐、空间浪费较少。
+	- Dendrogram (or cluster) algorithm
+		- 特点：
+			- 叶子节点放于同一层，更高效的使用空间。
+	- Indented tree
+		- 特点：
+			- 锯齿状结构，类似操作系统的文件系统。
+			- 要求较高的纵向空间、不利于多层次的阅读推断、难以整体把握。
+			- 寻找特定节点的效率很高。
+			- 允许节点标签的快速扫描、且可以在层次结构旁显示多个数据（比如文件大小）。
+
+![](/images/blogs/vis/d1.png)		
+![](/images/blogs/vis/d2.png)
+![](/images/blogs/vis/d3.png)		
+
+## 5.2 Adjacency Diagrams
+- 定义：
+	- 邻接图，node-link diagram 的空间填充变体。
+	- 节点会以密实区域的形式展现（弧形、长条...）而不是简单链接父子节点。
+	- 用节点相对邻接节点的放置位置，来表现层次结构。
+- 展现形式：
+	- 柱形布局：
+		- 类似第一张 node-link diagram。
+		- 但拥有了更多的可编码元素，可以展现数据的更多属性。比如说：用长度编码类和包的尺寸。
+	- sunburst 布局：
+		- 等价于柱形布局，但在一个不同的坐标系中（笛卡尔坐标系、极坐标系）。
+
+![](/images/blogs/vis/d4.png)	
+![](/images/blogs/vis/d5.png)	
+
+## 5.3 Enclosure Diagrams
+- enclosure：圈占。
+- 定义：
+	- 也是一种空间填充图，使用包容而不是邻接来表现层次结构。
+- 展现形式：
+	- Squarified treemaps：
+		- 定义：立方化的树图，递归的用矩形来划分区域。常使用填充来强调 Enclosure。
+		- 特点：更好的可读性和尺寸估计。
+	- Circles：
+		- 定义：填充圆而不是分块矩形。
+		- 特点：空间浪费较大，但也利于有效展现层次结构、且同一区域下的节点大小更利于比较。
+
+![](/images/blogs/vis/d6.png)	
+![](/images/blogs/vis/d7.png)	
+
+# 六、Networks
+- 背景：
+	- In addition to organization, one aspect of data that we may wish to explore through visualization is relationship.
+	- 除了数据组织（数据属性之间的关系）之外，我们还需要探索不同类型数据之间的关系。
+	- 就我的理解来说，人是一种类型的数据对象，狗也是一种类型的数据对象。而所有人、所有狗，分别形成两个数据集。Hierarchy and Network 之前我们探讨的是一个数据集中的数据（不同的人有不同的身高体重），现在我们讨论不同的数据集之间（狗是人的朋友）。
+- Hierarchy 和 Network 的关系：
+	- Abstractly, a hierarchy is a specialized form of network（each node has exactly one link to its parent, while the root node has no links.）.
+	- 就我的理解来说，hierarchy and network 的关系等价于 tree and graph。
+- Network 的布局算法：
+	- 由于 Network 不像 Hierarchy 一样有着层次结构，所以 Network 需要不同的布局算法来安置 nodes and links。
+	- 布局算法的挑战在于计算一个有效的布局，nodes 间关系的复杂化导致 nodes 的相对位置难以决定。
+
+## 6.1 Force-directed Layouts
+- 定义：网络布局的一种常见且直观的方法是将图形建模为物理系统：节点是互相排斥的带电粒子，而链路则是将相关节点拉到一起的阻尼弹簧。这个物理模型模拟的相对作用力，决定了节点的位置。
+- 特点：
+	- 容易表达整体结构。
+	- 网络庞大、节点高度连接时，容易变成难以读懂的一大团球。
+
+![](/images/blogs/vis/e1.png)	
+
+## 6.2 Arc Diagrams
+- 定义：一维布局，放置所有节点、圆弧连接代表相关关系。
+- 特点：
+	- 相对二维、三维布局，难以表达整体结构。
+	- 但具有良好的节点次序，容易识别集群和连接关系。
+	- 类似缩进树布局（chapter 5.1），多元数据可以显示在节点旁边。
+
+![](/images/blogs/vis/e2.png)	
+
+## 6.3 Matrix Views
+- 定义：类似邻接矩阵。矩阵中 i 行 j 列的值代表 nodeI 和 nodeJ 的连接关系。
+- 特点：
+	- 类似于 Arc Diagram，难以表达整体结构，但具有良好的节点次序，容易识别集群和连接关系。
+	- path-following 比较困难。
+	- 网络庞大、节点高速连接时，有效的排序节点也能很好的发现集群和连接关系。
+
+![](/images/blogs/vis/e3.png)	
+
+## 6.4 总结
+- Force-directed Layouts
+- Arc Diagrams and Matrix Views
+- 上述两组分别解决了两组对应需求。
+
+# 七、结论
+- 虽然展示了很多视觉编码和交互技术，但仍有更多的方法存在和等待发现。
+- 但可视化的潜在 DNA 是相同的：数据属性 -> 可视化特征（位置、形状、尺寸、颜色...）
+
+
+
+
+
+
+
+
+
+
+

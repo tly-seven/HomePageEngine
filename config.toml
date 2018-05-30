@@ -1,3 +1,41 @@
 baseURL = "http://example.org/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Ran Chen"
+theme = "hugo-nuo"
+
+# Copyright of your post
+copyright = "Powered by Hugo and hugo-nuo Theme. Copyright © 2017. All Rights Reserved."
+
+# Initial site menu, you can extend menu with content.
+[[menu.main]]
+  name = "Home"
+  weight = 10
+  identifier = "home"
+  url = "/"
+
+[[menu.main]]
+  name = "Works"
+  weight = 20
+  identifier = "works"
+  url = "https://github.com/crcrcry"
+
+[[menu.main]]
+  name = "Tags"
+  weight = 30
+  identifier = "tags"
+  url = "/tags/"
+
+# Add your own params here
+[params]
+  author = "Ran Chen"
+  avatar = "/images/about/chenran.png"
+  seotitle = "Ran Chen's Homepage"
+  subtitle = "Keep moving and explore my limit"
+  description = "Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
+  paginate = 10
+
+  # Choose your social networks
+  email = "crcrcry.hello@gmail.com"
+  github = "crcrcry"
+  wechat= "/images/about/wechat.jpeg"
+  zhihu = "crcr-30"
