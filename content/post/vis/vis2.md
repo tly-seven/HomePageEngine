@@ -1,7 +1,15 @@
 ---
-title: "常见可视化分析图表"
+title: "可视化分析图表"
 date: 2018-05-30T19:30:57+08:00
+tags: ["数据可视化"]
+cover: "/images/blogs/vis/a2.png"
 ---
+
+本文是一篇从简单到晦涩的可视化技术的调查 survey，通过例子简要展示了一些关于可视化和交互的技术，用于处理一些数据集。很多情况下，简单的数据图表是不够的，我们将关注一些更为复杂的、用于处理复杂数据集的技术。本文涉及处理的数据包含：时序数据、统计分布、地图、层次结构、网络等。
+
+<!--more-->
+
+[原文链接：a tour through the Visualization zoo](/files/papers/A Tour Through the Visualization Zoo.pdf)
 
 # 一、概述
 - 本文通过例子简要展示了一些关于可视化和交互的技术，用于处理一些数据集。
