@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://crcrcry.github.io/"
 languageCode = "en-us"
 title = "Ran Chen"
 theme = "hugo-nuo"
