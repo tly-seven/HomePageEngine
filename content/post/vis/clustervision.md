@@ -1,5 +1,5 @@
 ---
-title: "Clustervision"
+title: "Clustervision：无监督聚类的视觉监督"
 date: 2018-06-01T11:14:13+08:00
 tags: ["数据可视化", "TVCG"]
 cover: "/images/blogs/vis/Clustervision1.png"
