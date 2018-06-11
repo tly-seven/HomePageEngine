@@ -16,7 +16,7 @@ comments: false
 - 2014.9 - 2018.7 &nbsp; **College of CS & Tech, Zhejiang University** &nbsp; Bachelor
 
 ## Awards
-- 2017&nbsp; **COMAP Interdisciplinary Contest In Modeling** &nbsp;Honorable Mention
+- 2017&nbsp; [COMAP Interdisciplinary Contest In Modeling](http://www.comap.com/) &nbsp;Honorable Mention
 
 ## Experience
 - 2017.9 - 2017.12 &nbsp; **Department of Data Tech & Products, Alibaba Group** &nbsp; Intern
