@@ -2,7 +2,7 @@
 title: "TopoGroups: 多尺度空间聚合的上下文感知的视觉表示"
 date: 2018-06-26T18:56:32+08:00
 tags: ["数据可视化", "CHI"]
-cover: "/images/blogs/chi/TopoGroups0.png"
+cover: "/images/blogs/chi/TopoGroups8.png"
 ---
 
 地理空间上的数据之间都有着相关性：everything is related to everything else, but near things are more related than distant things。空间数据集（如带地理区域的 tweet）通常会在不同的缩放等级下展示不同的空间分布模式，而跨多尺度的导航和关联分析对于各领域专家仍然是重要的任务，其中多尺度关联分析尤其重要。而现阶段该任务往往伴随着巨大的交互成本和认知成本。于是 TopoGroups 被提出，它是一个基于自动空间层次聚类的多尺度可视分析技术。可以有效地帮助人们克服上述挑战，更好的进行地理空间多尺度关联分析。
