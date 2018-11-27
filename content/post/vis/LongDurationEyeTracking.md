@@ -1,6 +1,6 @@
 ---
 title: "在长时间眼动跟踪数据集中识别时变的感兴趣区域"
-cover: "/images/blogs/vis/LDET3.png"
+cover: "/images/LDET3.png"
 tags: ["数据可视化", "TVCG"]
 date: 2018-11-16T17:38:37+08:00
 ---
@@ -9,7 +9,7 @@ date: 2018-11-16T17:38:37+08:00
 
 <!--more-->
 
-[原文链接：Identification of Temporally Varying Areas of Interest in Long-Duration Eye-Tracking Data Sets](/files/papers/LongDurationEyeTracking.pdf)
+[原文链接：Identification of Temporally Varying Areas of Interest in Long-Duration Eye-Tracking Data Sets](/files/LongDurationEyeTracking.pdf)
 
 # 一、介绍
 
@@ -54,19 +54,19 @@ date: 2018-11-16T17:38:37+08:00
     - 选择原因：控制程度、灵活性、均匀性（后面的步骤也用），换言之，第一层聚类也可以使用别的合适的聚类算法。
   - 本工作中：眼睛聚集点是图的节点
 
-![1](/images/blogs/vis/LDET1.png)
+![1](/images/LDET1.png)
 
 - 步骤二：聚类合并AoIs	
   - 目的：查看临近时间窗口的注意力变化
   - 思路：基于局部重叠的临近时间窗，组合聚类，进而可以对齐赋予一些有意义的标签。
 
-![2](/images/blogs/vis/LDET2.png)
+![2](/images/LDET2.png)
 
 - 步骤三：向下赋予标签
 
-![3](/images/blogs/vis/LDET3.png)
+![3](/images/LDET3.png)
 
-![4](/images/blogs/vis/LDET4.png)
+![4](/images/LDET4.png)
 
 
 # 我的思考

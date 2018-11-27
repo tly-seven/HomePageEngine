@@ -2,14 +2,14 @@
 title: "TACO：表格随时间变化的可视化"
 date: 2018-06-02T13:09:36+08:00
 tags: ["数据可视化", "TVCG"]
-cover: "/images/blogs/vis/TACO6.png"
+cover: "/images/TACO6.png"
 ---
 
 多变量表格式的数据在生活中非常普遍，同时，表格可以进行结构和内容的改变，从而导致了同个表格的多种版本。然而，对于这些衍生的表格，很难理解它们在增删、重排序、合并和分裂、内容改变之间，究竟发生了什么变化。尤其是对于千万条条目级别的大型表格。本文作者提出了 TACO (TAble COmparison) 这一交互式比较工具，用于可视化不同细节等级的不同表格之间的不同。
 
 <!--more-->
 
-[原文链接：TACO: Visualizing Changes in Tables Over Time](/files/papers/TACO.pdf)
+[原文链接：TACO: Visualizing Changes in Tables Over Time](/files/TACO.pdf)
 
 # 一、介绍
 ## 1.1 摘要和介绍
@@ -76,7 +76,7 @@ cover: "/images/blogs/vis/TACO6.png"
 - 成对比较表：结果是一个联合表，其中包含了出现在任何一个输入表中 的所有的行和列。 
 - 联合表是 TACO 视觉展示的基础
 
-![](/images/blogs/vis/TACO1.png)
+![](/images/TACO1.png)
 
 # 六、可视化概念
 - multi-level overview+detail：自顶到底有三个等级的细节
@@ -85,7 +85,7 @@ cover: "/images/blogs/vis/TACO6.png"
 	3. 基于热力图的深度比较视图，允许将变化研究到单个单元值（cell）的等级
 - 接下来详细讨论了每个展示等级的细节、解释了设计原因、介绍了总体交互概念。
 
-![](/images/blogs/vis/TACO2.png)
+![](/images/TACO2.png)
 
 ## 6.1 多级变化聚合
 - diff table
@@ -102,7 +102,7 @@ cover: "/images/blogs/vis/TACO6.png"
 	- 堆叠条形图，总结了各个变化类型的全局占比。
 	- 完全没有任何行、列的相关信息。
 
-![](/images/blogs/vis/TACO3.png)
+![](/images/TACO3.png)
 
 ## 6.2 可视化组件
 - 三层细节等级
@@ -118,7 +118,7 @@ cover: "/images/blogs/vis/TACO6.png"
 - hover 时显示百分比
 - select，显示等级三的细节
 
-![](/images/blogs/vis/TACO4.png)
+![](/images/TACO4.png)
 
 ## 6.5 等级三：详细成对比较
 - Heatmap 的形式，表现 Raw table 及其之间的比较。优点在于对大型数据集的可拓展性。
@@ -131,14 +131,14 @@ cover: "/images/blogs/vis/TACO6.png"
 	- 重排序变化：slope graph，左右下三个盒子来代表行和列的重排序。按钮隐藏 diff heatmap 会使跟踪更加容易
 	- 合并/分解变化：Y-connector，三个盒子和重排序类似。如果是连续的，则 Y-connector 内部是填充的。
 
-![](/images/blogs/vis/TACO5.png)
+![](/images/TACO5.png)
 
 # 七、实现
 - D3.js + TypeScript + Flask + Phovea
 - [用户场景在线使用](https://taco.caleydoapp.org)
 - [Github 源代码](https://github.com/Caleydo/taco/)
 
-![](/images/blogs/vis/TACO7.png)
+![](/images/TACO7.png)
 
 # 八、用户场景
 - 场景说明
@@ -147,7 +147,7 @@ cover: "/images/blogs/vis/TACO6.png"
 - 评估说明：现有工具都不支持对不同变化类型进行编码，所以作者决定不进行正式评估，因为这只能证明别的方法的局限性。但是，作者相信强大的使用场景足以证明技术的有效性
 
 ## 8.1 夏季奥运会
-![](/images/blogs/vis/TACO6.png)
+![](/images/TACO6.png)
 
 # 九、讨论和局限性
 - 各种各样的表格：

@@ -2,14 +2,14 @@
 title: "LineUp：多属性排名的可视分析方法"
 date: 2018-05-31T14:21:53+08:00
 tags: ["数据可视化", "TVCG"]
-cover: "/images/blogs/vis/LineUp4.png"
+cover: "/images/LineUp4.png"
 ---
 
 排名是一种流行的通用方法，通过基于一个或多个属性的值为每个项目计算排名来构造有序的项目集合。这使我们能够评估各项目相对于彼此的性能。虽然排名本身的直观性很强，但它的解释并不直观，因为一个项目的排名仅代表其属性与其他项目之间潜在复杂关系的总结。所以需要对排名进行比较和分析，以深入了解多个异构属性如何影响排名。人们需要先进的视觉探索工具来使这个过程变得更加高效。在本文中，作者对多属性排名的可视化要求进行了全面分析。基于这些考虑，作者提出了 LineUp：一种使用条形图的新颖且可扩展的可视化技术。这种交互式技术支持基于具有不同尺度和语义的多个不同属性的项目排序。它使用户能够交互式地组合属性并灵活地改进参数，以探索属性组合中变化的影响。此外，通过整合斜坡图，LineUp 还可用于比较同一组项目上的多个备选排名，例如，随时间推移或跨越不同的属性组合。
 
 <!--more-->
 
-[原文链接：LineUp: Visual Analysis of Multi-Attribute Rankings](/files/papers/LineUp.pdf)
+[原文链接：LineUp: Visual Analysis of Multi-Attribute Rankings](/files/LineUp.pdf)
 
 # 一、介绍
 - 多属性动态客观排名，每个属性起什么样的作用是难以理解的。
@@ -27,7 +27,7 @@ cover: "/images/blogs/vis/LineUp4.png"
 10. 比较多个排名
 
 # 三、相关工作
-![](/images/blogs/vis/LineUp1.png)
+![](/images/LineUp1.png)
 
 ## 3.1 电子表格
 - 违反了 R2、R8、R10
@@ -86,13 +86,13 @@ cover: "/images/blogs/vis/LineUp4.png"
 	- diverging：基准线可以调整到任意属性
 	- ordered：将属性 bar 降序排列
 	- all-aligned
-![](/images/blogs/vis/LineUp2.png)
+![](/images/LineUp2.png)
 
 ### 4.2.2 Parallel Combination
 - 组合属性分数是属性集合中的最大值。
 - 对 item 排名没有贡献的属性得分，只有 item 被选中时才会显示。
 - 选中 item 时，相关 bar 会画在每个的顶部，为避免小值与大值重叠，bar 按照长度排序。
-![](/images/blogs/vis/LineUp3.png)
+![](/images/LineUp3.png)
 
 ## 4.3 排名变化编码
 - 需求：改变权重、设置过滤、创建或细化组合属性时，用户需要及时的反馈。
@@ -110,7 +110,7 @@ cover: "/images/blogs/vis/LineUp4.png"
 - 具体设计：水平放置多个排名，连接相同 item，斜率图。为了允许用户追踪用户触发动作的具体变化，允许创建快照。
 - 潜在问题：连接的项目可能超出可见区域。
 - 解决方案：减少杂乱，指向不可见 item 代表指向不可见目标。
-![](/images/blogs/vis/LineUp4.png)
+![](/images/LineUp4.png)
 
 ## 4.5 可拓展性
 - 强大的排序可视化需要能够支持大量的属性和大量的数据项。
@@ -141,7 +141,7 @@ cover: "/images/blogs/vis/LineUp4.png"
 - visual data mapping editor：映射函数的修改会实时反馈到可视化上
 	- 平行映射编辑器
 	- 正交映射编辑器
-![](/images/blogs/vis/LineUp5.png)
+![](/images/LineUp5.png)
 
 ## 4.7 数据丢失
 - 当前解决方式：舍弃该 item；丢失数据值取 0。

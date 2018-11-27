@@ -1,6 +1,6 @@
 ---
 title: "MotionRugs：集群趋势的时空可视化"
-cover: "/images/blogs/vis/MotionRugs3.png"
+cover: "/images/MotionRugs3.png"
 tags: ["数据可视化", "TVCG"]
 date: 2018-09-16T19:49:40+08:00
 ---
@@ -9,7 +9,7 @@ date: 2018-09-16T19:49:40+08:00
 
 <!--more-->
 
-[原文链接：MotionRugs: Visualizing Collective Trends in Space and Time](/files/papers/MotionRugs.pdf)
+[原文链接：MotionRugs: Visualizing Collective Trends in Space and Time](/files/MotionRugs.pdf)
 
 # 一、介绍
 - 背景：
@@ -148,7 +148,7 @@ date: 2018-09-16T19:49:40+08:00
 	2. 策略选择：工作流 2.1
 	3. 特征编码和视觉解释：工作流 2.2
 
-![](/images/blogs/vis/MotionRugs0.png)
+![](/images/MotionRugs0.png)
 
 ## 3.1 空间划分和转化
 - 一个空间二维数据转化为一维序列的总览
@@ -161,7 +161,7 @@ date: 2018-09-16T19:49:40+08:00
 - 典型例子：
 	- Z 阶曲线：利于计算
 	- 希尔伯特曲线：更好的保留了局部特征
-	![](/images/blogs/vis/MotionRugs1.png)
+	![](/images/MotionRugs1.png)
 
 ### 3.1.2 空间树结构
 - 背景：常用于在大型数据库中存储和检索数据
@@ -171,7 +171,7 @@ date: 2018-09-16T19:49:40+08:00
 	- R Trees
 	- 以及每种树的变体
 - 作用：反映了结构中，节点间空间接近度
-	![](/images/blogs/vis/MotionRugs2.png)
+	![](/images/MotionRugs2.png)
 - 特点：空间树结构不提供固有的一维排序，旨在保留数据的空间属性
 - 生成一维序列的方法：
 	- 利用树的通用可遍历性
@@ -186,7 +186,7 @@ date: 2018-09-16T19:49:40+08:00
 	- 空间填充曲线：差异在于遍历空间方式
 - 比较测试：时空鱼类数据，每秒 25 帧，每两个切片相差 40 m
 
-![](/images/blogs/vis/MotionRugs3.png)
+![](/images/MotionRugs3.png)
 
 - 从视觉效果看
 	- 似乎空间填充曲线相比树更有效的近似拟合了空间维度
@@ -206,8 +206,8 @@ date: 2018-09-16T19:49:40+08:00
 	- 其他三种方式的统计差异很小，然而仍然在最大值上有一些差异
 	- 最终，相对好的是希尔伯特曲线
 
-![](/images/blogs/vis/MotionRugs5.png)
-![](/images/blogs/vis/MotionRugs4.png)
+![](/images/MotionRugs5.png)
+![](/images/MotionRugs4.png)
 
 ### 视觉瑕疵
 - 通过观察视觉效果来进一步评估
@@ -218,7 +218,7 @@ date: 2018-09-16T19:49:40+08:00
 		- 的确是某些实体的特征发生了变化。
 - 从 Phantom-Splits 的瑕疵的角度，以及之前的统计角度，最好的空间聚合函数是希尔伯特曲线
 
-![](/images/blogs/vis/MotionRugs11.png)
+![](/images/MotionRugs11.png)
 
 
 ## 3.3 移动特征的视觉编码
@@ -229,7 +229,7 @@ date: 2018-09-16T19:49:40+08:00
 	4. Acceleration
 - 视觉编码：Colormap
 
-![](/images/blogs/vis/MotionRugs6.png)
+![](/images/MotionRugs6.png)
 
 
 ## 3.4 MotionRug 的可视化解释
@@ -240,19 +240,19 @@ date: 2018-09-16T19:49:40+08:00
 - 下面是具体的模式：
 - 空间停滞：平行水平线，表示整个组的整体位置停滞不变
 	
-	![](/images/blogs/vis/MotionRugs7.png)
+	![](/images/MotionRugs7.png)
 - 空间改变：从顶到底或从底到顶的条带，表示组内的空间变化
 
-	![](/images/blogs/vis/MotionRugs8.png)
+	![](/images/MotionRugs8.png)
 - 趋势进展：一部分实体引发的行为模式，例如：一组鱼游的更快导致整个组跟随
 
-	![](/images/blogs/vis/MotionRugs9.png)
+	![](/images/MotionRugs9.png)
 - 分裂和合并：
 	- 相似特征实体的空间变化（合并、分裂）
 	- 不一定有空间变化，而是特征趋势演化
 	- Phantom-Splits
 
-	![](/images/blogs/vis/MotionRugs10.png)
+	![](/images/MotionRugs10.png)
 
 
 # 四、用例和反馈
@@ -268,7 +268,7 @@ date: 2018-09-16T19:49:40+08:00
 	3. 开始和结束里程
 	4. 转圈
 
-![](/images/blogs/vis/MotionRugs12.png)
+![](/images/MotionRugs12.png)
 
 ## 4.2 专家反馈
 - 领域专家：动物集体行为领域的学者

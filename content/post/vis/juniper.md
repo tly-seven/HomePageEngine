@@ -1,6 +1,6 @@
 ---
 title: "Juniper：一种用于多变量图可视化的树+表格方法"
-cover: "/images/blogs/vis/Juniper3.png"
+cover: "/images/Juniper3.png"
 tags: ["数据可视化", "TVCG"]
 date: 2018-11-23T19:15:21+08:00
 ---
@@ -9,7 +9,7 @@ date: 2018-11-23T19:15:21+08:00
 
 <!--more-->
 
-[原文链接：Juniper: A Tree+Table Approach to Multivariate Graph Visualization](/files/papers/Juniper.pdf)
+[原文链接：Juniper: A Tree+Table Approach to Multivariate Graph Visualization](/files/Juniper.pdf)
 
 # 一、介绍
 
@@ -67,7 +67,7 @@ date: 2018-11-23T19:15:21+08:00
 
 # 四、概念
 
-![Juniper1](/images/blogs/vis/Juniper1.png)
+![Juniper1](/images/Juniper1.png)
 
 
 
@@ -96,7 +96,7 @@ date: 2018-11-23T19:15:21+08:00
       - 基于树的线性布局限制了可视化的可拓展性
   - 解决方式：减少节点数量
       - 分支隐藏
-      - 分支集成![Juniper2](/images/blogs/vis/Juniper2.png)
+      - 分支集成![Juniper2](/images/Juniper2.png)
 - 属性可视化：表格布局
 
 
@@ -107,7 +107,7 @@ date: 2018-11-23T19:15:21+08:00
 - 查询视图：节点/子图查询，分为接口查询和CQL查询
 - 树视图：
 
-![Juniper3](/images/blogs/vis/Juniper3.png)
+![Juniper3](/images/Juniper3.png)
 
 
 

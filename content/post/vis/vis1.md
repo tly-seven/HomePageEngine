@@ -8,7 +8,7 @@ tags: ["数据可视化"]
 
 <!--more-->
 
-[原文链接：大数据时代的可视化与协同创新](/files/papers/bigdata_vis_chinese.pdf)
+[原文链接：大数据时代的可视化与协同创新](/files/bigdata_vis_chinese.pdf)
 
 ## 一、大数据时代的背景
 - 大数据的四个特点（四个V）：

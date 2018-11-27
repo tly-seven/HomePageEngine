@@ -2,7 +2,7 @@
 title: "Visualizing API Usage Examples at Scale: 大规模可视化 API 用例"
 date: 2018-07-04T20:18:38+08:00
 tags: ["数据可视化", "CHI"]
-cover: "/images/blogs/chi/API2.png"
+cover: "/images/API2.png"
 ---
 
 随着库和 API 在数量和复杂性上的急速增长，在编程中，高效正确的使用 API 是一个关键的挑战。开发者通常需要搜索代码示例来学习 API，但开发者只能人工浏览一部分示例，这部分示例可能不能满足他们的需求。本文的目标是提供一个更好的工具 EXAMPLORE，用于探索海量代码示例的集合。
@@ -48,16 +48,16 @@ cover: "/images/blogs/chi/API2.png"
 	7. 资源管理：文件、流、sockets、数据库等资源的获取和释放
 - 可以推广到类似语言，比如 C++、C，但需要附加组件来捕获其他编程范式中的 API 特征（例如：函数式编程）
 
-![](/images/blogs/chi/API1.png)
+![](/images/API1.png)
 
 # 四、场景：与代码分布进行交互
-![](/images/blogs/chi/API2.png)
+![](/images/API2.png)
 
 - 学习使用 FileInputStream object，采用 100 个 GitHub 上挖掘的包含 FileInputStream object 的代码样例。
 	- 颜色标记：代码对应的骨架部分
 	- 代码样例从短到长排序
 	- 展示 Top 3 最普遍的用法，对每个骨架部分。bar chart 统计（总共占比），show more/less。
-	![](/images/blogs/chi/API3.png)
+	![](/images/API3.png)
 	- 点击勾选筛选代码，联动交互
 	
 # 五、系统架构和实现

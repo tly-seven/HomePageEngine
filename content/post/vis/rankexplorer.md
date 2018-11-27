@@ -2,14 +2,14 @@
 title: "Rankexplorer：大型时序数据的排名变化可视化"
 date: 2018-06-02T13:08:16+08:00
 tags: ["数据可视化", "TVCG"]
-cover: "/images/blogs/vis/RankExplorer1.png"
+cover: "/images/RankExplorer1.png"
 ---
 
 时序数据是当今热门应用数据，其中暗含了趋势、主题、异常、关系等知识。人们既关心数据值随着时间的变化，也关心数据的排名。例如：对于 Google 查询关键词，专家既关心词的搜索数量，也关心相对排名。这些数据随着时间变化。现阶段，叠图是这方面最为广泛使用的可视化技术。然而，叠图存在着不能展现时序变化的缺陷。增强叠图又容易导致混乱。所以，本文作者提出了 RankExplorer，基于 ThemeRiver 的可视化方法来展现排名随时间的变化。
 
 <!--more-->
 
-[原文链接：RankExplorer: Visualization of Ranking Changes in Large Time Series Data](/files/papers/RankExplorer.pdf)
+[原文链接：RankExplorer: Visualization of Ranking Changes in Large Time Series Data](/files/RankExplorer.pdf)
 
 # 摘要和介绍
 - 需求：时序数据是当今热门应用数据，其中暗含了趋势、主题、异常、关系等知识。人们既关心数据值随着时间的变化，也关心数据的排名。
@@ -36,8 +36,8 @@ cover: "/images/blogs/vis/RankExplorer1.png"
 
 
 # 三、系统概述
-![](/images/blogs/vis/RankExplorer1.png)
-![](/images/blogs/vis/RankExplorer2.png)
+![](/images/RankExplorer1.png)
+![](/images/RankExplorer2.png)
 
 - Summary View：ThemeRiver + 趋势曲线：
 	- Ranking：计算每个时间点的 ranking，并统计总体变化。
@@ -82,7 +82,7 @@ cover: "/images/blogs/vis/RankExplorer1.png"
 - 数学模型：拓展了反转数字的概念
 
 ### 4.3.2 Color Bars 编码方案
-![](/images/blogs/vis/RankExplorer3.png)
+![](/images/RankExplorer3.png)
 
 - Color Bars 代表层间的排名改变
 - 特殊的色彩编码颜色：
@@ -92,19 +92,19 @@ cover: "/images/blogs/vis/RankExplorer1.png"
 - 非相邻的、遥远的层次之间的内容变化是令人关注的，使用了两个交互来增强这些 color bar：
 	- 非线性缩放：根据层之间距离非线性的缩放高度。（图中来自两端的层更远，中央的层更近）
 	
-	![](/images/blogs/vis/RankExplorer4.png)
+	![](/images/RankExplorer4.png)
 
 	- 过滤：可以设置下限，来隐藏 change 不足的 bar
 
 ### 4.3.3 Changing Glyphs 编码方案
-![](/images/blogs/vis/RankExplorer5.png)
+![](/images/RankExplorer5.png)
 
 - Changing Glyphs 用于表达单层内的改变
 
 ## 4.4 统计视图和折线图视图
 - 需要更多更细节的信息
 
-![](/images/blogs/vis/RankExplorer6.png)
+![](/images/RankExplorer6.png)
 
 # 五、案例分析
 - Bing 三个月搜索引擎数据

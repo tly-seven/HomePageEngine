@@ -1,6 +1,6 @@
 ---
 title: "TPFlow：用于大规模时空数据分析的渐进式分区和多维模式提取"
-cover: "/images/blogs/vis/TPFlow5.png"
+cover: "/images/TPFlow5.png"
 tags: ["数据可视化", "TVCG"]
 date: 2018-10-21T11:44:02+08:00
 ---
@@ -9,7 +9,7 @@ date: 2018-10-21T11:44:02+08:00
 
 <!--more-->
 
-[原文链接：TPFlow: Progressive Partition and Multidimensional Pattern Extraction for Large-Scale Spatio-Temporal Data Analysis](/files/papers/TPFlow.pdf)
+[原文链接：TPFlow: Progressive Partition and Multidimensional Pattern Extraction for Large-Scale Spatio-Temporal Data Analysis](/files/TPFlow.pdf)
 
 # 一、介绍
 - 背景：
@@ -43,15 +43,15 @@ date: 2018-10-21T11:44:02+08:00
 - 外积：三个向量的外积可以得到一个三维张量。
 - 秩一张量：可以被向量外积表示的张量。
 
-![](/images/blogs/vis/TPFlow2.png)
+![](/images/TPFlow2.png)
 
 - 张量分解：逐步迭代，每次确定最好的秩一近似张量（捕获了最突出的数据变化和模式）。之后每次为剩余张量进行迭代。
-	![](/images/blogs/vis/TPFlow1.png)
+	![](/images/TPFlow1.png)
 - 细节：
 	1. 第一个近似张量可以总览数据
 	2. 迭代持续至 cost 提升很小或迭代步数到达上限
 	3. 最好的结果，最后一步 cost = 0，原始张量可以被完全分解。
-	![](/images/blogs/vis/TPFlow3.png)
+	![](/images/TPFlow3.png)
 
 
 ## 3.2 分段秩一张量分解
@@ -61,20 +61,20 @@ date: 2018-10-21T11:44:02+08:00
 	- 步骤：给定维度，发掘和划分有相似特征的子张量（作为第一个子张量）。对每个子张量进行分解。
 	- 发掘方式：组合问题，采用聚类算法。
 
-![](/images/blogs/vis/TPFlow4.png)
+![](/images/TPFlow4.png)
 
 # 四、TPFlow
 ## 4.2 可视化和交互
 - 基本可视化图表
-	![](/images/blogs/vis/TPFlow6.png)
+	![](/images/TPFlow6.png)
 - 偏差可视化
-	![](/images/blogs/vis/TPFlow7.png)
+	![](/images/TPFlow7.png)
 - 工作流：树状视图 + 维度特征视图
 	- 树状可视化划分过程
 	- 树节点的交互
 	- 查看特征和比较
 
-![](/images/blogs/vis/TPFlow5.png)
+![](/images/TPFlow5.png)
 
 # 五、用户场景
 - 区域销售数据分析

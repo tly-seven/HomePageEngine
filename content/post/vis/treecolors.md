@@ -2,14 +2,14 @@
 title: "Tree Colors：层次结构数据的配色方案选择"
 date: 2018-05-31T14:00:53+08:00
 tags: ["数据可视化", "TVCG"]
-cover: "/images/blogs/vis/Tree Colors4.png"
+cover: "/images/Tree Colors4.png"
 ---
 
 数据通常显式或隐式的带有层次结构。例子：商务数据可以分解为经济活动、地理区域人口数据。在数据可视化中，颜色是一个重要的视觉编码元素。在可视分析中，好的配色方案对反映层次结构是有帮助的。对节点连接图，甚至可以放松树的布局来获取更多空间、通过颜色增强对层次结构关系的表达。本文就将介绍，如何获得层次结构数据的最优配色方案。
 
 <!--more-->
 
-[原文链接：Tree Colors: Color Schemes for Tree-Structured Data](/files/papers/Tree Colors.pdf)
+[原文链接：Tree Colors: Color Schemes for Tree-Structured Data](/files/Tree Colors.pdf)
 
 # 一、介绍
 - 背景：
@@ -73,21 +73,21 @@ cover: "/images/blogs/vis/Tree Colors4.png"
 			4. 根据色调分数，减少每个等分块
 			5. 对每个子节点，递归调用该函数
 
-	![](/images/blogs/vis/Tree Colors1.png)
+	![](/images/Tree Colors1.png)
 - 色调排列和反转
 	- 重排列：
 		- 原因：在大多数层次结构中，同级节点没有顺序。因此，同级节点的颜色不应该引入感知顺序
 		- 解决方案：基于X元素排列，例如 5 元素排序 [1, 3, 5, 2, 4]，每两个临近节点相差 2/5 * 360 = 144°。
 		- 例子：对于位置为 [1, 2, 3, 4, 5] 的兄弟节点，颜色分配算法为 [1, 3, 5, 2, 4]，则重排列后的颜色位置为 [1, 4, 2, 5, 3] 
 	
-	![](/images/blogs/vis/Tree Colors2.png)
+	![](/images/Tree Colors2.png)
 	
 	- 反转：
 		- 原因：不同父亲的同级临近节点，颜色距离不够大，容易产生认知偏差。
 		- 解决方案：反转偶数节点的子节点的颜色分配，以增加不同父亲的相邻邻接节点的色调距离。
 		- 例子：[A.1, A.3, A.2] [B.2, B.3, B.1] [C.1, C.3, C.2]
 
-	![](/images/blogs/vis/Tree Colors3.png)
+	![](/images/Tree Colors3.png)
 	
 	- 适用范围：兄弟节点线性或径向分布时。
 - 色调分数：
@@ -100,8 +100,8 @@ cover: "/images/blogs/vis/Tree Colors4.png"
 		- 例如图6，布局对分辨不同主支很有帮助，就可以选取大的 f。
 		- 例如图7，主支 ABCD 难以分辨，适合选小的 f。
 	
-	![](/images/blogs/vis/Tree Colors4.png)
-	![](/images/blogs/vis/Tree Colors5.png)
+	![](/images/Tree Colors4.png)
+	![](/images/Tree Colors5.png)
 
 ## 3.2 色度和亮度
 - 方法：
@@ -112,12 +112,12 @@ cover: "/images/blogs/vis/Tree Colors4.png"
 	- 对于暗色，高色度有助于区分
 - 说明：本文使用减色法，作者提出了一系列参数参考和分析，但具体应该依据总层数和关注的层
 
-	![](/images/blogs/vis/Tree Colors6.png)
-	![](/images/blogs/vis/Tree Colors7.png)
-	![](/images/blogs/vis/Tree Colors8.png)
+	![](/images/Tree Colors6.png)
+	![](/images/Tree Colors7.png)
+	![](/images/Tree Colors8.png)
 
 ## 3.3 参数概览
-![](/images/blogs/vis/Tree Colors9.png)
+![](/images/Tree Colors9.png)
 	
 ## 3.4 色觉障碍
 - Tree Color 应能被色觉障碍的人群使用
@@ -137,7 +137,7 @@ cover: "/images/blogs/vis/Tree Colors4.png"
 - 例子：绿色弱和红色盲的仿真
 	- 绿色弱：三色异常，可以分辨所有色调，但饱和度和亮度不相等。
 	- 红色盲：二色，色调多样性减少，饱和度和亮度也有很大变化。
-![](/images/blogs/vis/Tree Colors10.png)
+![](/images/Tree Colors10.png)
 
 # 四、软件
 - 树图、节点链接图：R 语言，treemap 包，布局算法

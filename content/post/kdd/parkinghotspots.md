@@ -1,6 +1,6 @@
 ---
 title: "共享单车停在哪里？——新城市的停放热点挖掘"
-cover: "/images/blogs/kdd/ParkingHotspots5.png"
+cover: "/images/ParkingHotspots5.png"
 tags: ["数据挖掘", "KDD", "深度学习", "神经网络"]
 date: 2018-11-01T11:39:40+08:00
 ---
@@ -9,7 +9,7 @@ date: 2018-11-01T11:39:40+08:00
 
 <!--more-->
 
-[原文链接：Where Will Dockless Shared Bikes be Stacked? — Parking Hotspots Detection in a New City](/files/papers/Parking-Hotspots.pdf)
+[原文链接：Where Will Dockless Shared Bikes be Stacked? — Parking Hotspots Detection in a New City](/files/Parking-Hotspots.pdf)
 
 # 一、介绍
 - 背景：共享单车大背景下，胡乱停车带来了很多困扰 
@@ -58,7 +58,7 @@ date: 2018-11-01T11:39:40+08:00
 	2. 再评估道路中心点平均密度值，作为道路热度
 
 ## 3.2 热点的时空属性分析
-![](/images/blogs/kdd/ParkingHotspots1.png)
+![](/images/ParkingHotspots1.png)
 
 ### 3.2.1 时间属性：
 - 思路：
@@ -93,20 +93,20 @@ date: 2018-11-01T11:39:40+08:00
 ### 4.2.1 特征关联分析
 - 采用皮尔逊相关系数，计算和道路热度关联最强的10个特征
 
-![](/images/blogs/kdd/ParkingHotspots2.png)
+![](/images/ParkingHotspots2.png)
 
 ### 4.2.2 城市间领域分析
 - 特征领域转移：
 	1. 采用最大平均差异（MMD）来量化源城市和目标城市的差异。其中 u 是城市特征平均化后的特征向量。公式：
 		
-		![](/images/blogs/kdd/ParkingHotspots3.png)
+		![](/images/ParkingHotspots3.png)
 	2. TSNE 可视化降维
 - 结果：
-![](/images/blogs/kdd/ParkingHotspots4.png)
+![](/images/ParkingHotspots4.png)
 - 结论：存在不同城市的知识转移，需要用引入一个城市领域的适应方法。
 
 ## 4.3 城市领域适应网络
-![](/images/blogs/kdd/ParkingHotspots5.png)
+![](/images/ParkingHotspots5.png)
 
 - ConvCDAN：
 	1. FeatureNet：源城市学习到的判别特征
@@ -153,10 +153,10 @@ date: 2018-11-01T11:39:40+08:00
 	- 所有方法都至少 30% 准确率，表明停放位置与多源数据的地理信息紧密相关。
 	- 北京->宁波 > 上海->北京 > 上海->宁波，潜在原因是道路网络的复杂性，三个城市的道路数量分别是 12916、8913、1242。
 
-![](/images/blogs/kdd/ParkingHotspots7.png)
+![](/images/ParkingHotspots7.png)
 
 ## 5.3 FeatureNet 中卷积操作的影响
-![](/images/blogs/kdd/ParkingHotspots6.png)
+![](/images/ParkingHotspots6.png)
 
 ## 5.4 DensityNet 中 Ranking Loss 的影响
 
@@ -188,7 +188,7 @@ date: 2018-11-01T11:39:40+08:00
 		- 具体解释是，事件 { x < X < x+h } 的概率应为 F(x+h)-F(x)。所以比值 [F(x+h)-F(x)]/h(h->0) 可以解释为单位概率。F'(x)=f(x)，f(x)为概率密度函数。
 		- 反映了概率在 x 点处的密集程度。
 
-![](/images/blogs/kdd/ParkingHotspotsSupplement1.png) 
+![](/images/ParkingHotspotsSupplement1.png) 
 
 ## 核密度估计（KDE）
 - 密度估计：

@@ -2,7 +2,7 @@
 title: "Clustervision：无监督聚类的视觉监督"
 date: 2018-06-01T11:14:13+08:00
 tags: ["数据可视化", "TVCG"]
-cover: "/images/blogs/vis/Clustervision1.png"
+cover: "/images/Clustervision1.png"
 ---
 
 聚类算法是无监督机器学习的一种常见类型，对于汇总和聚合复杂多维数据以使其更易于解释是很有帮助的。有多种多样的聚类方法，如 K-means、凝聚聚类、DBSCAN、光谱聚类。然而，现阶段存在一个问题：对于不同的用户，关注不同数据集的不同层次和方面，什么算法和参数能得到一个最好的聚类结果？这一点往往是通过专家的经验去判断和解决。而本文提出了 Clustervision，为用户计算和评估所有的聚类，并推荐其中高质量的聚类，帮助用户更好的理解数据并激发创造力。
@@ -10,7 +10,7 @@ cover: "/images/blogs/vis/Clustervision1.png"
 
 <!--more-->
 
-[原文链接：Clustervision: Visual Supervision of Unsupervised Clustering](/files/papers/Clustervision.pdf)
+[原文链接：Clustervision: Visual Supervision of Unsupervised Clustering](/files/Clustervision.pdf)
 
 # 一、介绍
 - 背景：
@@ -109,7 +109,7 @@ cover: "/images/blogs/vis/Clustervision1.png"
 - D：探索某个聚类的细节
 - E：探索数据点的细节
 
-![](/images/blogs/vis/Clustervision1.png)
+![](/images/Clustervision1.png)
 
 ### 4.2.1 聚类结果排名列表
 - 排名计算：
@@ -126,7 +126,7 @@ cover: "/images/blogs/vis/Clustervision1.png"
 		- 最小化不同聚类结果间颜色改变的点的数量：最低成本完美匹配问题，使用 Hungarian algorithm 来保持颜色一致性。
 		- Range Slider：调整聚类尺寸	
 
-		![](/images/blogs/vis/Clustervision2.png)
+		![](/images/Clustervision2.png)
 
 ### 4.2.2 Projection
 - 二维散点图：
@@ -134,7 +134,7 @@ cover: "/images/blogs/vis/Clustervision1.png"
 	- 数据点的位置是稳定的
 	- 可以选择不同的降维技术以及 SuperPoint 范围
 
-	![](/images/blogs/vis/Clustervision3.png)
+	![](/images/Clustervision3.png)
 
 ### 4.2.3 基于特征的视图：Ranked Features and Parallel Trends
 - 作用：和映射视图协调工作，展现特征信息
@@ -150,7 +150,7 @@ cover: "/images/blogs/vis/Clustervision1.png"
 - Ranked Features 用于解决 Parallel Trends 的可拓展性问题。Ranked Features 中 checkbox 的选取和取消选取，用于添加和移除特征到 Parallel Trends
 
 
-	![](/images/blogs/vis/Clustervision4.png)
+	![](/images/Clustervision4.png)
 
 ### 4.2.4 Cluster Detail and Data Point
 - Cluster Detail
@@ -162,14 +162,14 @@ cover: "/images/blogs/vis/Clustervision1.png"
 		- 离散的：直方图
 		- 连续的：kernel density plot
 
-![](/images/blogs/vis/Clustervision5.png)
-![](/images/blogs/vis/Clustervision6.png)
+![](/images/Clustervision5.png)
+![](/images/Clustervision6.png)
 
 ### 4.2.5 聚类约束
 - 用户可以选择多个点，告诉系统它们必须在同一个聚类或不同聚类
 
 ### 4.2.6 比较聚类结果
-![](/images/blogs/vis/Clustervision7.png)
+![](/images/Clustervision7.png)
 
 
 # 五、案例研究

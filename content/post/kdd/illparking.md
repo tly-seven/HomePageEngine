@@ -1,6 +1,6 @@
 ---
 title: "利用共享单车轨迹检测非法停车事件"
-cover: "/images/blogs/kdd/IllParking0.png"
+cover: "/images/IllParking0.png"
 tags: ["数据挖掘", "KDD"]
 date: 2018-11-11T10:58:00+08:00
 ---
@@ -9,7 +9,7 @@ date: 2018-11-11T10:58:00+08:00
 
 <!--more-->
 
-[原文链接：Detecting Vehicle Illegal Parking Events using Sharing Bikes’ Trajectories](/files/papers/IllParking.pdf)
+[原文链接：Detecting Vehicle Illegal Parking Events using Sharing Bikes’ Trajectories](/files/IllParking.pdf)
 
 # 一、介绍
 
@@ -19,8 +19,8 @@ date: 2018-11-11T10:58:00+08:00
 - 局限性：覆盖范围有限、成本高
 - 解决思路：
   - 方法：通过挖掘共享单车轨迹检测非法停车
-  - 优点：使用范围广、数据质量高（采样频繁）![1](/images/blogs/kdd/IllParking1.png)
-  - 直觉（可行性）验证实验：可行![IllegalParking2](/images/blogs/kdd/IllParking2.png)
+  - 优点：使用范围广、数据质量高（采样频繁）![1](/images/IllParking1.png)
+  - 直觉（可行性）验证实验：可行![IllegalParking2](/images/IllParking2.png)
 - 挑战：
   - 数据错误（GPS 设备或人为产生）
   - 地图匹配：难于普通匹配，因为自行车可以在道路外行走。
@@ -67,7 +67,7 @@ date: 2018-11-11T10:58:00+08:00
   - 没有非法停车的轨迹特征更稳定和易于辨别
   - 测量轨迹集合的聚合特征
   - 和 build-up proximity 高度相关，因此对每个路段建立基线模型
-- 问题解决思路：将聚合轨迹的位移分布（相对基线轨迹）作为检测的主要特征![IllParking3](/images/blogs/kdd/IllParking3.png)
+- 问题解决思路：将聚合轨迹的位移分布（相对基线轨迹）作为检测的主要特征![IllParking3](/images/IllParking3.png)
 
 
 
@@ -89,7 +89,7 @@ date: 2018-11-11T10:58:00+08:00
 - 直觉：
   - 平均位移和峰值位移不重叠，暗示了非法停车事件（位移剧变）。
 
-![IllParking4](/images/blogs/kdd/IllParking4.png)
+![IllParking4](/images/IllParking4.png)
 
 
 

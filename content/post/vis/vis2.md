@@ -2,14 +2,14 @@
 title: "可视化分析图表"
 date: 2018-05-30T19:30:57+08:00
 tags: ["数据可视化"]
-cover: "/images/blogs/vis/a2.png"
+cover: "/images/a2.png"
 ---
 
 本文是一篇从简单到晦涩的可视化技术的调查 survey，通过例子简要展示了一些关于可视化和交互的技术，用于处理一些数据集。很多情况下，简单的数据图表是不够的，我们将关注一些更为复杂的、用于处理复杂数据集的技术。本文涉及处理的数据包含：时序数据、统计分布、地图、层次结构、网络等。
 
 <!--more-->
 
-[原文链接：a tour through the Visualization zoo](/files/papers/A Tour Through the Visualization Zoo.pdf)
+[原文链接：a tour through the Visualization zoo](/files/A Tour Through the Visualization Zoo.pdf)
 
 # 一、概述
 - 本文通过例子简要展示了一些关于可视化和交互的技术，用于处理一些数据集。
@@ -30,7 +30,7 @@ cover: "/images/blogs/vis/a2.png"
 	- 一个更关注股票增长速率、而不是股票价格的投资者。
 	- 下图为股票相对于 Jan 2005 时间，股价的变化速率。
 
-![](/images/blogs/vis/a1.png)
+![](/images/a1.png)
 
 ## 2.2 Stacked Graphs
 - 定义：Stacked Graphs（or Stream Graphs），描绘了聚合、叠加形态的图，且支持进入子集
@@ -41,7 +41,7 @@ cover: "/images/blogs/vis/a2.png"
 	- 难以准确的描述趋势，由于它叠加的性质。
 - Example：2000——2010，美国失业者的数量，按照行业来区分。
 
-![](/images/blogs/vis/a2.png)
+![](/images/a2.png)
 
 ## 2.3 Small Multiples
 - 定义：将每个 Time-Series Data 安置在一个图表上。
@@ -51,7 +51,7 @@ cover: "/images/blogs/vis/a2.png"
 - 构造形式：any，条形图、饼图、地图...
 - Example：类似上一节，2000——2010，美国失业者的数量，按照行业来区分。
 
-![](/images/blogs/vis/a3.png)
+![](/images/a3.png)
 
 ## 2.4 Horizon Graphs
 - 需求：想要同时比较更多的 Time-Series Data，更大的数据密度同时保持分辨率。
@@ -62,7 +62,7 @@ cover: "/images/blogs/vis/a2.png"
 	- 图四：再次 double。
 	- 图五：再次 double。
 
-![](/images/blogs/vis/a4.png)
+![](/images/a4.png)
 
 # 三、Statistical Distributions
 - 需求：
@@ -79,7 +79,7 @@ cover: "/images/blogs/vis/a2.png"
 - 作用：既能获得频率分布，也能获得每一个数据。
 - Example：在亚马逊土耳其机器人（一种众包网络集市）上，众包完成率分布情况。
 
-![](/images/blogs/vis/b1.png)
+![](/images/b1.png)
 
 ## 3.2 Q-Q Plots
 - 定义：
@@ -89,7 +89,7 @@ cover: "/images/blogs/vis/a2.png"
 - 作用：统计分布相比较。
 - Example：亚马逊土耳其机器人上相同的一组参与度数据，与均匀分布、正态分布以及一个混合模型分布做比较。
 
-![](/images/blogs/vis/b2.png)
+![](/images/b2.png)
 
 ## 3.3 SPLOM（Scatter Plot Matrix）
 - 散点图：
@@ -102,16 +102,16 @@ cover: "/images/blogs/vis/a2.png"
 	1. 散点图：人属性数据：身高、体重、性别。
 	2. 散点图矩阵：汽车属性数据：马力、重量、速度（加速）、排水量。
 
-![](/images/blogs/vis/b5.png)
+![](/images/b5.png)
 ---
-![](/images/blogs/vis/b3.png)
+![](/images/b3.png)
 
 ## 3.4 Parallel Coordinates
 - 定义：平行坐标。为了表示在高维空间的一个点集，在N条平行的线的背景下，（一般这N条线都竖直且等距），一个在高维空间的点被表示为一条拐点在N条平行坐标轴的折线，在第K个坐标轴上的位置就表示这个点在第K个维的值。
 - 需求：传统的笛卡尔直角坐标系容易耗尽空间，难以表达三维以上数据。需要一种用于对高维几何和多元数据的可视化方式。
 - Example：
 
-![](/images/blogs/vis/b4.png)
+![](/images/b4.png)
 
 # 四、Maps
 ## 4.1 Flow Maps
@@ -119,7 +119,7 @@ cover: "/images/blogs/vis/a2.png"
 - 优点：可以通过许多元素进行编码，比如路径点、方向、线宽、颜色...
 - Example：拿破仑远征莫斯科
 
-![](/images/blogs/vis/c1.png)
+![](/images/c1.png)
 
 ## 4.2 Choropleth Maps
 - 定义：地区分布图。数据常常根据地理区域来收集，并通常通过颜色编码在 Choropleth Maps 上呈现。
@@ -128,7 +128,7 @@ cover: "/images/blogs/vis/a2.png"
 	- 阴影数值的感知会被影响。
 - Example：美国各州肥胖比率。
 
-![](/images/blogs/vis/c2.png)
+![](/images/c2.png)
 
 ## 4.3 Graduated Symbol Maps
 - 定义：符号图，属于 Choropleth Maps 的一种。将符号放置在地图上。
@@ -137,13 +137,13 @@ cover: "/images/blogs/vis/a2.png"
 	- 允许更多元的数据（符号有多重可编码方式：尺寸、形状、颜色...）
 - Example：美国各州 BMI 比率，即肥胖比率升级版。
 
-![](/images/blogs/vis/c3.png)
+![](/images/c3.png)
 
 ## 4.4 Cartograms
 - 定义：扭曲了地理区域的形状，因此地理区域可以直接对数据进行编码。
 - Example：美国各州肥肠人口数量和比率。
 
-![](/images/blogs/vis/c4.png)
+![](/images/c4.png)
 
 # 五、Hierarchies
 - 一些数据集仅仅是数据的水平向收集，但更多的数据集是有纵向层次结构的。甚至有的数据集，即便没有明显的层次结构，通过统计学方法也可以转为有层次结构的数据集。
@@ -166,9 +166,9 @@ cover: "/images/blogs/vis/a2.png"
 			- 寻找特定节点的效率很高。
 			- 允许节点标签的快速扫描、且可以在层次结构旁显示多个数据（比如文件大小）。
 
-![](/images/blogs/vis/d1.png)		
-![](/images/blogs/vis/d2.png)
-![](/images/blogs/vis/d3.png)		
+![](/images/d1.png)		
+![](/images/d2.png)
+![](/images/d3.png)		
 
 ## 5.2 Adjacency Diagrams
 - 定义：
@@ -182,8 +182,8 @@ cover: "/images/blogs/vis/a2.png"
 	- sunburst 布局：
 		- 等价于柱形布局，但在一个不同的坐标系中（笛卡尔坐标系、极坐标系）。
 
-![](/images/blogs/vis/d4.png)	
-![](/images/blogs/vis/d5.png)	
+![](/images/d4.png)	
+![](/images/d5.png)	
 
 ## 5.3 Enclosure Diagrams
 - enclosure：圈占。
@@ -197,8 +197,8 @@ cover: "/images/blogs/vis/a2.png"
 		- 定义：填充圆而不是分块矩形。
 		- 特点：空间浪费较大，但也利于有效展现层次结构、且同一区域下的节点大小更利于比较。
 
-![](/images/blogs/vis/d6.png)	
-![](/images/blogs/vis/d7.png)	
+![](/images/d6.png)	
+![](/images/d7.png)	
 
 # 六、Networks
 - 背景：
@@ -218,7 +218,7 @@ cover: "/images/blogs/vis/a2.png"
 	- 容易表达整体结构。
 	- 网络庞大、节点高度连接时，容易变成难以读懂的一大团球。
 
-![](/images/blogs/vis/e1.png)	
+![](/images/e1.png)	
 
 ## 6.2 Arc Diagrams
 - 定义：一维布局，放置所有节点、圆弧连接代表相关关系。
@@ -227,7 +227,7 @@ cover: "/images/blogs/vis/a2.png"
 	- 但具有良好的节点次序，容易识别集群和连接关系。
 	- 类似缩进树布局（chapter 5.1），多元数据可以显示在节点旁边。
 
-![](/images/blogs/vis/e2.png)	
+![](/images/e2.png)	
 
 ## 6.3 Matrix Views
 - 定义：类似邻接矩阵。矩阵中 i 行 j 列的值代表 nodeI 和 nodeJ 的连接关系。
@@ -236,7 +236,7 @@ cover: "/images/blogs/vis/a2.png"
 	- path-following 比较困难。
 	- 网络庞大、节点高速连接时，有效的排序节点也能很好的发现集群和连接关系。
 
-![](/images/blogs/vis/e3.png)	
+![](/images/e3.png)	
 
 ## 6.4 总结
 - Force-directed Layouts

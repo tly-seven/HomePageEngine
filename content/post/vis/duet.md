@@ -1,6 +1,6 @@
 ---
 title: "Duet：协助数据分析新手进行成对比较"
-cover: "/images/blogs/vis/Duet1.png"
+cover: "/images/Duet1.png"
 tags: ["数据可视化", "TVCG"]
 date: 2018-10-03T16:40:51+08:00
 ---
@@ -9,7 +9,7 @@ date: 2018-10-03T16:40:51+08:00
 
 <!--more-->
 
-[原文链接：Duet: Helping Data Analysis Novices Conduct Pairwise Comparisons by Minimal Specification](/files/papers/Duet.pdf)
+[原文链接：Duet: Helping Data Analysis Novices Conduct Pairwise Comparisons by Minimal Specification](/files/Duet.pdf)
 
 # 一、介绍
 - 背景：成对比较，促进决策
@@ -48,19 +48,19 @@ date: 2018-10-03T16:40:51+08:00
 	- 关系映射：显示保存的推荐对象关系
 
 ## 4.1 Overview
-![](/images/blogs/vis/Duet1.png)
+![](/images/Duet1.png)
 
 
 ## 4.2 属性列表、数据表格、组和属性架
-![](/images/blogs/vis/Duet2.png)
+![](/images/Duet2.png)
 
 ## 4.3 组和属性架、结果面板
-![](/images/blogs/vis/Duet3.png)
-![](/images/blogs/vis/Duet4.png)
+![](/images/Duet3.png)
+![](/images/Duet4.png)
 
 ## 4.4 关系映射
-![](/images/blogs/vis/Duet5.png)
-![](/images/blogs/vis/Duet6.png)
+![](/images/Duet5.png)
+![](/images/Duet6.png)
 
 # 五、Minimal Specification 技术的实现
 - 介绍：
@@ -71,7 +71,7 @@ date: 2018-10-03T16:40:51+08:00
 - 具体计算相似和不相似的没有细看，但感觉没有很特别。
 - 缺失值处理：直接移除缺失值
 
-![](/images/blogs/vis/Duet7.png)
+![](/images/Duet7.png)
 
 # 我的思考
 - 可视化设计简单易懂，工作流紧密。紧扣本文主题，适合数据分析新手使用。

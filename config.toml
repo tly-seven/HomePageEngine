@@ -28,7 +28,7 @@ copyright = "Powered by Hugo and hugo-nuo Theme. Copyright © 2017. All Rights R
 # Add your own params here
 [params]
   author = "Ran Chen"
-  avatar = "/images/about/chenran.png"
+  avatar = "/images/chenran.png"
   seotitle = "Ran Chen's Homepage"
   subtitle = "Keep moving and explore my limit"
   description = "Hugo is one of the most popular open-source static site generators. With its amazing speed and flexibility, Hugo makes building websites fun again."
@@ -37,5 +37,4 @@ copyright = "Powered by Hugo and hugo-nuo Theme. Copyright © 2017. All Rights R
   # Choose your social networks
   email = "crcrcry.hello@gmail.com"
   github = "crcrcry"
-  wechat= "/images/about/wechat.jpeg"
   zhihu = "crcr-30"

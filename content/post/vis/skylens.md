@@ -2,14 +2,14 @@
 title: "Skylens：多维数据的 Skyline 的可视化分析"
 date: 2018-06-01T11:13:52+08:00
 tags: ["数据可视化", "TVCG"]
-cover: "/images/blogs/vis/SkyLens0.png"
+cover: "/images/SkyLens0.png"
 ---
 
 对多维数据，天际线查询可以得到优势点（支配点）的子集。这在涉及多准则决策制定的各个领域都很重要。然而，存在两个问题：1. 天际线查询只能解决一半的问题。因为用户仍然需要手动选择最理想的项目；2. 大量的候选方案和属性容易给用户带来情绪压力，不利于决策。人们想要解决这个问题，面临着两个挑战：1. 如何解释天际线：即理解天际线点的优点；2. 如何进行多个天际线点的比较劲。进而，SkyLens 被提出，用于帮助用户多角度比较和解释天际点，并作出决策。
 
 <!--more-->
 
-[原文链接：SkyLens: Visual Analysis of Skyline on Multi-dimensional Data](/files/papers/SkyLens.pdf)
+[原文链接：SkyLens: Visual Analysis of Skyline on Multi-dimensional Data](/files/SkyLens.pdf)
 
 # 一、介绍
 - 背景：
@@ -29,7 +29,7 @@ cover: "/images/blogs/vis/SkyLens0.png"
 	3. 两个使用真实数据集的用户研究场景来展现 SkyLens 的有效性
 
 # 二、背景
-![](/images/blogs/vis/SkyLens1.png)
+![](/images/SkyLens1.png)
 
 - 数据
 	- m 维空间 D = (d1, d2, ..., dm)
@@ -97,9 +97,9 @@ cover: "/images/blogs/vis/SkyLens0.png"
 	- 内部圆形亮度表示统治分数，外部扇形半径表示属性值大小。
 	- 当选中一个 point 时，其他所有 point 会转化为 focus 模式，即和被选中 point 的属性值进行比较，扇形颜色用于表示属性值得不同。
 	- 潜在缺点是视觉混乱，通过降低 glyph 透明度来减少混乱。
-	![](/images/blogs/vis/SkyLens2.png)	
+	![](/images/SkyLens2.png)	
 - Glyph 替代：
-	![](/images/blogs/vis/SkyLens3.png)
+	![](/images/SkyLens3.png)
 
 ## 6.2 表格视图	
 - 视觉编码
@@ -114,7 +114,7 @@ cover: "/images/blogs/vis/SkyLens0.png"
 	- 链接：连接到属性分布图
 	- 查询：查询数据集中的特定点
 
-![](/images/blogs/vis/SkyLens4.png)
+![](/images/SkyLens4.png)
 
 ## 6.3 比较视图	
 - 雷达图：增强了传统雷达图，用于展示 skyline points 的属性值。编码元素：
@@ -130,12 +130,12 @@ cover: "/images/blogs/vis/SkyLens0.png"
 	- hover：混合雷达图
 		- 颜色线：天际线点
 		- 灰色线：hover 扇区的被统治点
-	![](/images/blogs/vis/SkyLens5.png)
+	![](/images/SkyLens5.png)
 - 可选设计：
 	- 设计思路：中心雷达图（属性值） + 外部环（统治分数），外部环上的圆代表被支配的点。
 	- 缺点：被支配的点数量很大时，视觉混乱
 
-	![](/images/blogs/vis/SkyLens6.png)	
+	![](/images/SkyLens6.png)	
 
 ## 6.4 交互
 - 拖动改变属性顺序

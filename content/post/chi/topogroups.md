@@ -2,7 +2,7 @@
 title: "TopoGroups: 多尺度空间聚合的上下文感知的视觉表示"
 date: 2018-06-26T18:56:32+08:00
 tags: ["数据可视化", "CHI"]
-cover: "/images/blogs/chi/TopoGroups8.png"
+cover: "/images/TopoGroups8.png"
 ---
 
 地理空间上的数据之间都有着相关性：everything is related to everything else, but near things are more related than distant things。空间数据集（如带地理区域的 tweet）通常会在不同的缩放等级下展示不同的空间分布模式，而跨多尺度的导航和关联分析对于各领域专家仍然是重要的任务，其中多尺度关联分析尤其重要。而现阶段该任务往往伴随着巨大的交互成本和认知成本。于是 TopoGroups 被提出，它是一个基于自动空间层次聚类的多尺度可视分析技术。可以有效地帮助人们克服上述挑战，更好的进行地理空间多尺度关联分析。
@@ -47,7 +47,7 @@ cover: "/images/blogs/chi/TopoGroups8.png"
 
 # 四、TOPOGROUPS：多尺度空间集成
 ## 4.1 生成空间聚集层次
-![](/images/blogs/chi/TopoGroups1.png)
+![](/images/TopoGroups1.png)
 
 ## 4.2 上下文感知的可视化
 - 隐式曲线表达空间聚合的边界，优点：
@@ -55,21 +55,21 @@ cover: "/images/blogs/chi/TopoGroups8.png"
 	2. 易与数据项区分开
 	3. 较高级别集群边界内的空间可用于较低级别集群进行可视化，产生较小视觉杂波
 - 减小边界重叠：进行失真
-	![](/images/blogs/chi/TopoGroups7.png)
+	![](/images/TopoGroups7.png)
 - 多个视觉编码策略：旨在传达空间聚合的单变量和多变量属性
 	- 单变量属性：
 		- 例子：数据点数量、地理区域大小、聚合的规模（缩放尺度）
 		- 编码方式：内部区域颜色、边界宽度/颜色
 		- 晕轮的指示作用
-			![](/images/blogs/chi/TopoGroups3.png)
+			![](/images/TopoGroups3.png)
 	- 多变量属性
 		- 主要从数据项的分类中产生，例如从社交媒体数据提取不同的主题
 		- 编码方式：连续彩色线段（长度）、离散的彩色虚线（数量）、堆积线（宽度）
-			![](/images/blogs/chi/TopoGroups4.png)
+			![](/images/TopoGroups4.png)
 		- 重复模式的使用，避免传达错误信息
-			![](/images/blogs/chi/TopoGroups5.png)
+			![](/images/TopoGroups5.png)
 - 一个例子：
-	![](/images/blogs/chi/TopoGroups6.png)
+	![](/images/TopoGroups6.png)
 	
 ## 4.3 交互和接口设计
 - 交互式地图视图

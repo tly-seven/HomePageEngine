@@ -1,6 +1,6 @@
 ---
 title: "基于共享单车轨迹规划自行车道路"
-cover: "/images/blogs/kdd/BikeLines8.png"
+cover: "/images/BikeLines8.png"
 tags: ["数据挖掘", "KDD"]
 date: 2018-10-12T11:39:02+08:00
 ---
@@ -9,7 +9,7 @@ date: 2018-10-12T11:39:02+08:00
 
 <!--more-->
 
-[原文链接：Planning Bike Lanes based on Sharing-Bikes’ Trajectories](/files/papers/Bike-Lanes.pdf)
+[原文链接：Planning Bike Lanes based on Sharing-Bikes’ Trajectories](/files/Bike-Lanes.pdf)
 
 # 一、介绍
 - 背景：自行车是广泛的城市交通模式，有多个优点。
@@ -40,11 +40,11 @@ date: 2018-10-12T11:39:02+08:00
 	- 最大使用率：最大化所有自行车道的使用率
 		- 促进服务更多用户
 		- 覆盖更多连通路段：提高用户体验。例如，Plan2 好于 Plan1。
-			![](/images/blogs/kdd/BikeLines1.png)
+			![](/images/BikeLines1.png)
 		- 这两个目标是矛盾的，因此提出一个得分函数，用于根据偏好计算每条轨迹的分数。
-			![](/images/blogs/kdd/BikeLines2.png)
+			![](/images/BikeLines2.png)
 		- 因此可以得出一个边集（即规划方案）的总分
-			![](/images/blogs/kdd/BikeLines3.png)
+			![](/images/BikeLines3.png)
 - 问题定义：
 	- 找到一个路网边集，最大化使用率，同时能够满足预算限制和连通限制。
 - 问题难度：NP-hard。
@@ -72,26 +72,26 @@ date: 2018-10-12T11:39:02+08:00
 # 四、自行车道规划
 - 描述了贪心网络拓展算法，以及初始化该算法的不同方法
 
-![](/images/blogs/kdd/BikeLines4.png)		
+![](/images/BikeLines4.png)		
 
 ## 4.1 贪心网络拓展算法
 - 思路：在网络中拓展一组 k 个起始路段
 - 启发：源于数据集中两个关键点的发现，空间热点、星状移动模式
-	![](/images/blogs/kdd/BikeLines5.png)	
+	![](/images/BikeLines5.png)	
 - 具体步骤：
 	- 初始化：选择 k 个起始路段
 	- 网络拓展：迭代的运行算法。每次迭代选择最好的邻接路段，拓展网络		
 	- 终止：终止于经费不足
-	![](/images/blogs/kdd/BikeLines6.png)	 
+	![](/images/BikeLines6.png)	 
 
 ## 4.2 基于 Top-k 的初始化
 - 思路：选择最高排名的 k 个段
 - 启发：top k 代表空间热点，应该包含在规划方案中
 - 缺点：top k 过于临近，限制了搜索空间
-![](/images/blogs/kdd/BikeLines7.png)	 		
+![](/images/BikeLines7.png)	 		
 ## 4.3 基于聚类的空间初始化		
 - 采用了层次聚类，原因是不需要设置空间参数（DBSCAN）并总生成稳定的结果（K Means）。
-![](/images/blogs/kdd/BikeLines8.png)	 	
+![](/images/BikeLines8.png)	 	
 		
 # 七、相关工作
 - 数据驱动的城市规划
